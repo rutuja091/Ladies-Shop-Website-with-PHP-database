@@ -83,25 +83,7 @@
 
  }
 
- /*
-.contact_data2 button {
-   margin: 20px 10px;
-   border: 1px solid #fff;
-   padding: 10px 20px;
-   background: #02ccfe;
-   color:#000000;
-   font-size: 1rem;
-   border-radius: 23px;
-   cursor: pointer;
-   transition: all 0.3s;
-   font-family: 'Montserrat', sans-serif;
-   justify-content: center;
-   text-align: center;
-   margin-left:30%;
- }
-  end third card css*/
 
- 
 
 </style>
 </head>
@@ -138,17 +120,9 @@
         <li class="nav-item">
           <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"></i><sup>1</sup></a>
         </li>
-       <!--<li class="nav-item">
-          <a class="nav-link" href="#">Total Price</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>-->
+       
       </ul>
-      <!--<form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light" type="submit">Search</button>
-      </form>-->
+     
     </div>
   </div>
 </nav>
@@ -195,9 +169,7 @@
           <button class="button bg-info py-2 px-3  mt-4  mb-4 ms-5 border-0 rounded btn-style" type="submit"  name="submit">Send Feedback</button>
          
          
-          <!--<a href=".\feedback-view.php">
-          <button class="button bg-secondary text-white py-2 px-3 mt-4 mb-4 border-0 rounded">View Feedback</button>
-        </a>-->
+         
 
 
        
