@@ -30,7 +30,6 @@
     width:80px;
     border-radius:20px;
   }
-
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@200;500&display=swap');
 header{
 font-size: 20px;
@@ -55,7 +54,6 @@ font-family: 'Montserrat', sans-serif;
     
   }
 
-  
  .contact_data1 ul {
     list-style: none;
     text-decoration:none;
@@ -120,7 +118,6 @@ font-family: 'Montserrat', sans-serif;
  
   
 }
-
 
 .sociadMedia a{
   width:50px;
@@ -279,10 +276,10 @@ font-family: 'Montserrat', sans-serif;
   <div class= "second-part">
   <span class="sociadMedia" >
             
-    <a href="http://youtube.com/@roadtocode4u" class=""><i class="fa-brands fa-youtube " alt="youtube-icon"></i></a>
+    <a href="http://youtube.com/" class=""><i class="fa-brands fa-youtube " alt="youtube-icon"></i></a>
      <a href="http://github.com/rutuja091" class=""><i class="fa-brands fa-github" alt="github-icon"></i></a>
-     <a href="http://instagram.com/roadtocode4u" class=""><i class="fa-brands fa-instagram" alt="instagram-icon"></i></a>
-     <a href="http://linkedin.com/company/roadtocode" class=""><i class="fa-brands fa-linkedin-in" alt="inkedin-icon"></i></a>
+     <a href="http://instagram.com/" class=""><i class="fa-brands fa-instagram" alt="instagram-icon"></i></a>
+     <a href="http://linkedin.com/" class=""><i class="fa-brands fa-linkedin-in" alt="inkedin-icon"></i></a>
    </span>
    </div>
  <!--social media end-->
