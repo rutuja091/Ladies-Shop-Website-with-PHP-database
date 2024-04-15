@@ -14,56 +14,8 @@ $databasePassword = "";
 $con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
 
 
-/*
-// Get the ID of the inserted row
-$lastInsertedID = mysqli_insert_id($con);
-
-// Use the ID in further operations
-$query = "SELECT id FROM user_order ";
-
-$result = mysqli_query($con, $query); 
-
-*/
-
-// Connect to the database
-
-
-// Insert a new record
-/*mysqli_query($con, "SELECT id FROM user_order ");
-
-// Get the last inserted record ID
-$lastRecordId = mysqli_insert_id($con);
-
-// Pass the value to a button
-
-
-// Close the database connection
-mysqli_close($con);*/
-
-
-
 // Connect to your database
 
-/*
-// Insert your data into the table
-$query = "INSERT INTO user_order";
-mysqli_query($con, $query);
-
-// Get the last inserted ID
-$lastInsertedID = mysqli_insert_id($con);
-
-// Fetch the value using the last inserted ID
-$query = "SELECT * FROM user_order WHERE id = $lastInsertedID";
-$result = mysqli_query($con, $query);
-$row = mysqli_fetch_assoc($result);
-
-// Print the fetched value
-echo $row['id'];
-
-// Close the database connection
-mysqli_close($con);
-
-*/
 // Get the maximum ID from the table
 $query = "SELECT MAX(id) AS max_id FROM user_order";
 $result = mysqli_query($con, $query);
@@ -179,17 +131,9 @@ p{
         <li class="nav-item">
           <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"></i><sup>1</sup></a>
         </li>
-       <!--<li class="nav-item">
-          <a class="nav-link" href="#">Total Price</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>-->
+     
       </ul>
-      <!--<form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light" type="submit">Search</button>
-      </form>-->
+      
     </div>
   </div>
 </nav>
@@ -229,20 +173,7 @@ echo "<a href='payment.php?id=" . $maxId . "'>Pay Now</a>";?>
  </div>
 
 
-
-
-
-
-
-
-
-
-
-
 </div>
-
-
-
 
 <!---last child--->
 <div class="bg-info p-3 text-center">
