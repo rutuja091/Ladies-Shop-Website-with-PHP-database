@@ -8,8 +8,7 @@ $databasePassword = "";
 
 $con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
 
-// Fetch data in descending order (lastest entry first)
-//$sql = "SELECT * FROM add_product WHERE `id` = $id";
+
  //$query= $con->query($sql)
 
  $id=$_GET['id'];
@@ -30,83 +29,6 @@ $con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseN
 
  
 ?>
-
-
-
-
-
-<?php
-
-
-// Select data associated with this particular id
-
-
-
-
-
-
-
-
-
-// Fetch data in descending order (lastest entry first)
-//$sql = "SELECT * FROM user_order WHERE id = $id";
- //$query= $con->query($sql)
-?>
-
-                        
-
- 
-                      
-<?php
-
-
-
-
-/*
-
-// Fetch data in descending order (lastest entry first)
-$sql = "SELECT * FROM  user_order   WHERE id = $id ";
-$query_run=mysqli_query($con,$sql);
-$check_product=mysqli_num_rows($query_run)>0;
-
- if($check_product)
- //{
-  $i=0;
- while($row=mysqli_fetch_array($query_run))
- {
-  echo "<tr>";
-  echo" <td >".++$i."</td>";
-  echo "<td>".$res['id']."</td>";
- }
-//}*/
-  ?>
-  <?php
-  // 
-//
-
-// Fetch data in descending order (lastest entry first)
-
-
-/*
-$id=$_GET['id'];
-
-// Select data associated with this particular id
-
-  $sql=  "SELECT * FROM add_product WHERE id = $id";
-
-
-   $query= $con->query($sql);
-  // Fetch the next row of a result set as an associative array
-
-  $resultData = $query->fetch_assoc();
-
-  $product_price = $resultData['product_price'];
-  $product_name=$resultData['product_name'];
-*/
-?>
-
-
-
 
 
 
@@ -170,17 +92,7 @@ $id=$_GET['id'];
   
 
  }
- 
- /*.contact_data2 form input {
-   width: 90%;
-   margin: 05px 0 0 10px;
-   padding: 07px 10px;
-   border: 1px solid #232526;
-   font-size: 1rem;
-   border-radius: 05px;
 
-
- }*/
 
 .cust-input {
   width: 90%;
@@ -299,17 +211,9 @@ $id=$_GET['id'];
         <li class="nav-item">
           <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"></i><sup>1</sup></a>
         </li>
-       <!--<li class="nav-item">
-          <a class="nav-link" href="#">Total Price</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>-->
+    
       </ul>
-      <!--<form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light" type="submit">Search</button>
-      </form>-->
+    
     </div>
   </div>
 </nav>
@@ -368,69 +272,6 @@ $id=$_GET['id'];
           
 
 
-
-<?php
-
-
-// Fetch the next row of a result set as an associative array
-/*$i=0;
-while ($res = $query->fetch_assoc())
- {
-  echo "<table>";
-  echo "<tr>";
-  //echo" <td >".++$i."</td>";
-  echo "<td>".$res['product_price']."</td>";
-  
-		
-  echo "</tr>";	
-  echo "</table>";	
-}
-*/
-
-
-
- //$query="SELECT * FROM `add_product` WHERE `id` = $id ";
-/*
- $query = "SELECT * FROM add_product WHERE `id` = $id";
- //$query_run= $con->query($query)
- $query_run=mysqli_query($con,$query);
- $i=0;
- while($row=mysqli_fetch_array($query_run)){
-   ?>
-   <tr>
-  
-  <?php echo" <td >".++$i."</td>";?>
- 
-
-      <td> <?php echo $row['product_price'];  ?></td>
-      
-      <?php
-       
-      
-
- }*//*
- $num=$_GET['id'];
-
- $sql=  "SELECT * FROM user_order WHERE id = $num";
-  
- if(mysqli_query($con, $sql))
-        {
-         // Obtain last inserted id
-         $last_id = mysqli_insert_id($con);
-         echo "Records inserted successfully. Last inserted ID is: " . $last_id;
-       } else{
-         echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
-       }
-       
-       // Close connection
-       mysqli_close($con);
-
-
-       */
-
-
-?>
-
 <!--<label  for="price"><b>Total Price:</b></label>-->
 <label  for="price"><b>Product Name</b></label>
 <input  class="product-inp"type="text" readonly name="product_name"  value="<?php echo  $product_name;?>"  required/>
@@ -448,43 +289,13 @@ while ($res = $query->fetch_assoc())
     <label  for="price"><b>Total Price:</b></label>
     <input class="product-inp" type="text"id="total" name="total"/>
       
-          <!--<label  for="price"><b>Total Amount:</b></label>
-          <input class="product-inp" type="number" name="total_price" required/>-->
-        <!--- <button  class="button bg-info py-2 px-3  mt-4  mb-4 ms-5 border-0 rounded" name="user_order" 
-          value=" //  echo " <a href=\"..\user_area\payment.php?id=$resultData[id]\></a>"
-
-        
-</button>-->
-
-
+   
 <?php echo  "<input type=submit name=user_order  value='Order Now' class=button />";?>
 <?php echo "</a>";?>
 
 
-<?php
-/*
-
-// Get the ID of the inserted row
-$lastInsertedID = mysqli_insert_id($con);
-
-// Use the ID in further operations
-$query = "SELECT id FROM user_order ";
-
-$result = mysqli_query($con, $query); 
-
-?> 
-
-
- <button class="button" >
- <?php echo "<a href=\"..\user_area\payment.php?id=$lastInsertedID\">Pay Now</a>";?>
-</button>
-    */
-
-
-?>
          
-<!--<button class="button bg-info py-2 px-3  mt-4  mb-4 ms-5 border-0 rounded" type="submit"  name="user_order">Order Now</button>
-          <a href="..\user_area\order.php"></a>--->
+
           </div>
         </form>
       </div>
@@ -503,40 +314,6 @@ $result = mysqli_query($con, $query);
   </script>
 
                             
-
-<?php
-// Include the database connection file
-
-/*
-
-if (isset($_POST['Submit'])) 
-{
-
-	// Escape special characters in a string for use in an SQL statement
-
-  $id = $_POST['id'];
-	
-
-	$product_name =$_POST['product_name'];
-
-
-	$product_price = $_POST['product_price'];
-	
-	
-}	
-	 
-	
-?>
-
-    
-
- */
-
-
- 
-
-?>
-
 
      
  </div>
