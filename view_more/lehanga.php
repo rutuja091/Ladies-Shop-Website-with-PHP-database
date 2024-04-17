@@ -30,7 +30,7 @@
 .product_card{
   height:500px;
   width:390px;
-
+ 
   border-radius: 10px 10px;
    box-shadow:0 0 10px rgba(0 , 0 , 0, 0.4);
   margin-left:17px;
@@ -48,7 +48,6 @@
  #card_body{
   margin:10px;
  }
-
  .button{
   height:40px;
   width:100px;
@@ -110,7 +109,12 @@ decoration:none;
         <li class="nav-item">
           <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"></i><sup>1</sup></a>
         </li>
+       
       </ul>
+      <!--<form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>-->
     </div>
   </div>
 </nav>
@@ -131,7 +135,7 @@ decoration:none;
 
 <!---third child--->
 <div class="bg-light">
-<h3 class="text-center">Beauty Product</h3>
+<h3 class="text-center">Lehanga</h3>
 <p class="text-center">Communication is at the heart of e-commerce and community</p>
 </div>
 
@@ -145,48 +149,44 @@ decoration:none;
 
 <div class="row" >
 <!--
-<div class="col-md-4 mb-2">
-<div class="product_card">  
-
-  <img src="..\images\view_product\beauty_product\lipstick_1.jpg"  class="card_img" alt="...">
-
-  <div class="card-body"id="card_body">
-    <h5 class="card-title">Lakme Lipstick</h5>
-    <p class="card-text">Lakme Cushion Matte Lipstick with a revolutionary soft matte  lips feel soft and comfortable.</p>
-    <a href="..\buy_now\buy_beauty_product_1.php" class="btn btn-info" id="button">Buy Now</a>
-   
+<div class="col-md-4 mb-2"> 
+  <div class="product_card">
+  
+  <img src="..\images\view_product\lehenga\lehenga_1.jpg" class="card_img" alt="...">
+  
+  <div class="card-body" id="card_body">
+   <h5 class="card-title">PartyWear Lehanga</h5>
+    <p class="card-text"> usually made with lightweight fabrics like georgette, chiffon, or net and are embellished .</p>
+    <a href="..\buy_now\buy_lehanga_1.php" class="btn btn-info" id="button">Buy Now</a>
   </div>
 </div></div>
 
-
 <div class="col-md-4 mb-2">
-<div class="product_card">  
-
-  <img src="..\images\view_product\beauty_product\powder_2.jpg"  class="card_img" alt="...">
+   <div class="product_card"> 
   
+  <img src="..\images\view_product\lehenga\lehanga_2.jpg" class="card_img" alt="...">
+ 
   <div class="card-body"id="card_body">
-    <h5 class="card-title">Lakme Powder</h5>
-    <p class="card-text">Look picture perfect with the Lakmé Face It Compact. Use this dynamic compact by Lakme </p>
-    <a href="..\buy_now\buy_beauty_product_2.php" class="btn btn-info" id="button">Buy Now</a>
-   
+    <h5 class="card-title"> Weeding Lehanga</h5>
+    <p class="card-text">	
+Heavy Bridal Lehenga Choli with Heavy Embroidery work</p>
+
+<a href="..\buy_now\buy_lehanga_2.php" class="btn btn-info" id="button">Buy Now</a>
   </div>
 </div></div>
 
 <div class="col-md-4 mb-2"> 
-<div class="product_card"> 
-
-  <img src="..\images\view_product\beauty_product\kajal_3.jpg"class="card_img"alt="...">
+  <div class="product_card"> 
   
+  <img src="..\images\view_product\lehenga\lehanga_3.jpg" class="card_img" alt="...">
+ 
   <div class="card-body"id="card_body">
-    <h5 class="card-title">Lakme Kajal</h5>
-    <p class="card-text">Having a full and shaped eyebrow can easily add more definition
-       to your facial structure.</p>
-  
-       <a href="..\buy_now\buy_beauty_product_3.php"class="btn btn-info" id="button">Buy Now</a>
+    <h5 class="card-title"> Designer Lehanga</h5>
+    <p class="card-text">Designer lehenga cholis are popular due to their intricate designs,  and exquisite craftsmanship..</p>
+    <a href="..\buy_now\buy_lehanga_3.php" class="btn btn-info" id="button">Buy Now</a>
+    
   </div>
-</div></div>
-
--->
+</div></div>-->
 
 <?php
 $databaseHost = "localhost";
@@ -199,7 +199,7 @@ $databasePassword = "";
 $con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
 
 // Fetch data in descending order (lastest entry first)
-$sql = "SELECT * FROM add_product WHERE product_category='Beauty-Product' ORDER BY id DESC ";
+$sql = "SELECT * FROM add_product WHERE product_category='Lehanga' ORDER BY id DESC ";
 $query_run=mysqli_query($con,$sql);
 $check_product=mysqli_num_rows($query_run)>0;
 
@@ -220,12 +220,9 @@ $check_product=mysqli_num_rows($query_run)>0;
     <p class="card-text text-center"><?php echo $row['product_desc'];?></p>
     <p class="card-text text-center ">Price:₹<?php echo $row['product_price'];?></p>
     <button  class="button">
-    <?php  echo "<a href=\"..\user_area\order.php?id=$row[id]\" >Buy Now";?>
-  
+    <?php  echo "<a href=\"..\user_area\order.php?id=$row[id]\" >Buy Now</a>";?>
  </button>
- </a>
     <!--<a href="..\user_area\order.php" class="btn btn-info" id="button">Buy Now</a>-->
-    
     
   </div>
 </div></div>
@@ -235,12 +232,13 @@ $check_product=mysqli_num_rows($query_run)>0;
 
  
 
-}
 
 
- 
+
+ }
  }
 ?>
+
 
 
 </div></div>
@@ -345,6 +343,7 @@ $check_product=mysqli_num_rows($query_run)>0;
     <a href="..\view_more\watch.php" class="nav-link text-light " ><h6>Watch</h6>
   </a>
    </li>
+
 </ul>
 </div>
 </div>
