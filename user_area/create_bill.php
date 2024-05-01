@@ -1,6 +1,8 @@
 
 
 
+
+
 <?php
 
 
@@ -65,7 +67,7 @@ mysqli_close($con);
 
 */
 // Get the maximum ID from the table
-$query = "SELECT MAX(id) AS max_id FROM user_order";
+$query = "SELECT MAX(id) AS max_id FROM user_payment";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($result);
 $maxId = $row['max_id'];
@@ -78,6 +80,7 @@ mysqli_close($con);
 
 
 ?> 
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -124,7 +127,7 @@ mysqli_close($con);
     border:none;
     border-radius:10px;
     width:300px;
-    background-color:green;
+    background-color:black;
     color:#ffff;
     font-size:20px;
 
@@ -216,14 +219,14 @@ p{
   <div class="card pt-4 card ">
  
 
- <p><b> Click Here  👇 ..........!   And Make Your Payment</b></p>
+ <p><b> Click Here  👇 ..........!   And View Your Shopping Bill</b></p>
   <!--<button class="button" >
  <?php //echo "<a href=\"..\user_area\payment.php?id=[id]\">Pay Now</a>";?>
 
 </button>-->
 <button class="button" >
  <?php  
-echo "<a href='payment.php?id=" . $maxId . "'>Pay Now</a>";?>
+echo "<a href='bill.php?id=" . $maxId . "'>Get Bill</a>";?>
 </button>
 </div>
  </div>
@@ -256,10 +259,3 @@ Nimse Nikita
  </script>
  </body>
 </html>
-
-
-
-
-
-
-

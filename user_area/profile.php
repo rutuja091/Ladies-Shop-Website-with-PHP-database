@@ -18,48 +18,6 @@
 
 <!--css file-->
 <link rel="stylesheet" href="style.css">
-<style>
-  .logo{
-    height:70px;
-    width:80px;
-    border-radius:20px;
-  }
-
-
-.logo{
-    height:70px;
-    width:80px;
-    border-radius:20px;
-  }
-  .first_card{
-    height:auto;
-    padding:20px;
-    width:1200px;
- box-shadow:0 0 10px rgba(0 , 0 , 0, 0.2);
-  border-radius:5px;
-  margin-left:200px;
-  border:none;
-  margin-bottom:50px;
-  }
-  p{
-    padding:20px;
-    font-size:25px;
-  }
-  h1{
- margin-left:700px;
- margin-bottom:50px;
-  }
-  .second_card{
-   display:flex;
-   box-shadow:0 0 40px rgba(0 , 0 , 0, 0.2);
-   margin-left:400px;
-   margin-bottom:30px;
-   width:700px;
-
-    
-   
-  }
-</style>
 </head>
 <body>
 
@@ -71,40 +29,39 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-info">
   <div class="container-fluid">
 
- 
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <img src="..\images\logo\logo.png" alt="" class="logo">
+      <img src=".\images\logo1.jpg" alt="" class="logo">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../homepage.php">Home</a>
-        </li>
-        
-      
-        
         <li class="nav-item">
-          <a class="nav-link" href=".\contact_us.php">Contact us</a>
+          <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href=".\faq.php">FAQ</a>
+          <a class="nav-link" href="../display_all.php">Product</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href=".\feedback.php">Feedback</a>
+          <a class="nav-link" href="profile.php">My account</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"></i><sup>1</sup></a>
         </li>
-         <!--<li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" href="#">Total Price</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>-->
+        </li>
       </ul>
-      <!--<form class="d-flex" role="search">
+      <form class="d-flex" role="search" action="../search_product.php">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-light" type="submit">Search</button>
-      </form>-->
+      </form>
     </div>
   </div>
 </nav>
@@ -114,10 +71,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
 <ul class="navbar-nav me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="#"></a>
+    <a class="nav-link" href="#" >Welcome Guest</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="./user_area/user_login.php"></a>
+    <a class="nav-link" href="#" >Login</a>
 </li>
   </ul>
 </nav>
@@ -125,48 +82,45 @@
 
 <!---third child--->
 <div class="bg-light">
-<h3 class="text-center">Ladies Shope</h3>
+<h3 class="text-center">Ladies Shoppe</h3>
 <p class="text-center">Communication is at the heart of e-commerce and community</p>
 </div>
 
+<!--fourt child-->
+<div class="row">
 
-<!--fourth child--->
-<div class="row" >
- 
-<h1>About </h1><br>
-   <div class="first_card"> 
-   
-   <p>It is for these reasons that 90% of our clients from all over the world keep coming back! Just ask them!
+<div class="col-md-2 p-0">
+    <ul class="navbar nav bg-info text-center">
+    
+    
+    <li class="nav-item bg-info">
+          <a class="nav-link text-light" href="#"><h4>Your Profile</h4></a>
+        </li>
+        <li class="nav-item bg-info">
+          <img src="..\images\watch 2.jpg" alt="">
+        </li>
+        </ul>
+    </div>
+    <div class="col-md-10"></div>
 
-<b>NR Ladies Shope</b>is a unified communications platform that empowers business owners and 
-promotes business growth through services that strengthen brand identity, and sustainably promote online presence to increase engagement. We offer services to help small 
-business enterprises from branding, website development, to digital marketing—and
- everything else digital in between.</p>
-
-
- </div>
-
- </div>
-
-<div class="row " >
- <div class="second_card  ">
-  <img src="..\images\about\img1.jpg">
-</div>
 
 </div>
-
 
 <!---last child--->
 <div class="bg-info p-3 text-center">
-    Developed by:-<br>
+    Presented by:-<br>
 Gaikwad Rutuja ,
 Nimse Nikita 
 </div>
+
 </div>
+
 
 
 <!--bootstarap js link-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
  </script>
- </body>
+ 
+
+</body>
 </html>
